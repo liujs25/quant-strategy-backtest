@@ -29,6 +29,10 @@ data/processed/*.csv
 # Results
 results/figures/
 !results/figures/.gitkeep
+!results/figures/*.png
+!results/figures/*.jpg
+!results/figures/*.jpeg
+!results/figures/*.gif
 
 # OS
 .DS_Store
