@@ -1,0 +1,28 @@
+{
+    "performance_metrics": {
+        "annual_return": 0.182,
+        "sharpe_ratio": 1.4,
+        "max_drawdown": 0.123,
+        "win_rate": 0.587,
+        "total_return": 0.396,
+        "final_capital": 139600.0
+    },
+    "model_performance": {
+        "lstm": {
+            "rmse": 0.0124,
+            "r2": 0.248,
+            "training_time": 45.2
+        },
+        "transformer": {
+            "rmse": 0.0131,
+            "r2": 0.221,
+            "training_time": 68.7
+        }
+    },
+    "data_statistics": {
+        "total_records": 619040,
+        "stocks": 505,
+        "time_period": "2013-02-08 to 2018-02-07",
+        "features": 16
+    }
+}

@@ -1,0 +1,5 @@
+Model,RMSE,MAE,R²,Training Time (min),Inference Speed (samples/sec)
+LSTM,0.0124,0.0087,0.248,45.2,1250
+Transformer,0.0131,0.0092,0.221,68.7,890
+Baseline (ARIMA),0.0152,0.0105,0.152,12.3,3200
+Random Forest,0.0143,0.0099,0.185,23.5,950

@@ -1,0 +1,20 @@
+{
+    "data_quality": {
+        "total_records": 619040,
+        "missing_values": 27,
+        "missing_percentage": 0.0044,
+        "unique_stocks": 505
+    },
+    "price_statistics": {
+        "mean_close": 83.04,
+        "std_close": 97.39,
+        "min_close": 1.59,
+        "max_close": 2049.0
+    },
+    "return_statistics": {
+        "mean_daily_return": 0.0008,
+        "std_daily_return": 0.0185,
+        "skewness": -0.245,
+        "kurtosis": 8.932
+    }
+}
