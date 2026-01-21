@@ -27,7 +27,7 @@ data/processed/*.csv
 !data/processed/.gitkeep
 
 # Results
-results/figures/
+results/figures/*
 !results/figures/.gitkeep
 !results/figures/*.png
 !results/figures/*.jpg
