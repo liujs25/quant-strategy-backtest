@@ -130,11 +130,12 @@ class LSTMModel(nn.Module):
             预测结果
         """
         self.eval()
+        device = next(self.parameters()).device
         with torch.no_grad():
             if isinstance(x, np.ndarray):
                 x = torch.FloatTensor(x)
-            predictions = self.forward(x)
-        return predictions.numpy()
+            predictions = self.forward(x.to(device))
+        return predictions.detach().cpu().numpy()
 
 
 class PositionalEncoding(nn.Module):
@@ -152,11 +153,17 @@ class PositionalEncoding(nn.Module):
         pe[:, 0::2] = torch.sin(position * div_term)
         pe[:, 1::2] = torch.cos(position * div_term)
         
-        pe = pe.unsqueeze(0).transpose(0, 1)
+        # Models in this project use batch_first=True, so positional encodings
+        # must follow (batch, sequence, feature) broadcasting semantics.
+        pe = pe.unsqueeze(0)
         self.register_buffer('pe', pe)
     
     def forward(self, x):
-        return x + self.pe[:x.size(0), :]
+        if x.size(1) > self.pe.size(1):
+            raise ValueError(
+                f"Sequence length {x.size(1)} exceeds max_len {self.pe.size(1)}"
+            )
+        return x + self.pe[:, :x.size(1), :]
 
 
 class TransformerModel(nn.Module):
@@ -277,11 +284,12 @@ class TransformerModel(nn.Module):
             预测结果
         """
         self.eval()
+        device = next(self.parameters()).device
         with torch.no_grad():
             if isinstance(x, np.ndarray):
                 x = torch.FloatTensor(x)
-            predictions = self.forward(x)
-        return predictions.numpy()
+            predictions = self.forward(x.to(device))
+        return predictions.detach().cpu().numpy()
 
 
 class ModelTrainer:
@@ -722,7 +730,7 @@ def train_lstm_model(X_train, y_train, X_val, y_val, input_size, **kwargs):
     
     # 学习率调度器
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
-        optimizer, mode='min', factor=0.5, patience=5, verbose=True
+        optimizer, mode='min', factor=0.5, patience=5
     )
     
     # 训练模型
@@ -780,7 +788,7 @@ def train_transformer_model(X_train, y_train, X_val, y_val, input_size, **kwargs
     
     # 学习率调度器
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
-        optimizer, mode='min', factor=0.5, patience=5, verbose=True
+        optimizer, mode='min', factor=0.5, patience=5
     )
     
     # 训练模型
@@ -828,7 +836,7 @@ def main():
     
     # 这里只是一个演示，实际使用时需要先加载预处理好的数据
     print("注意：此演示需要先运行数据预处理模块获取数据")
-    print("请先运行 test_preprocessing.py 或 notebooks/Modeling.ipynb")
+    print("请先运行 src/data_preprocessing.py 或 notebooks/Modeling.ipynb")
 
 
 if __name__ == "__main__":

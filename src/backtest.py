@@ -2,6 +2,7 @@
 
 import numpy as np
 import pandas as pd
+import os
 from datetime import datetime, timedelta
 import warnings
 warnings.filterwarnings('ignore')
@@ -33,7 +34,8 @@ class BacktestEngine:
         self.trade_log = []
         self.position_log = []
         
-    def run_backtest(self, prices, predictions, signals=None, strategy_type='simple'):
+    def run_backtest(self, prices, predictions, signals=None, strategy_type='simple',
+                     benchmark_returns=None):
         """
         运行回测
         
@@ -47,12 +49,24 @@ class BacktestEngine:
             交易信号（如果为None则根据预测生成）
         strategy_type : str
             策略类型：'simple'（简单阈值）或 'momentum'（动量策略）
+        benchmark_returns : array-like, optional
+            与策略收益对齐的市场基准日收益率。仅在提供时计算 Alpha、Beta
+            和信息比率；未提供时这些指标返回 NaN。
             
         Returns:
         --------
         dict
             回测结果
         """
+        prices = np.asarray(prices, dtype=float).reshape(-1)
+        predictions = np.asarray(predictions, dtype=float).reshape(-1)
+        if prices.size < 2 or predictions.size < 2:
+            raise ValueError("prices and predictions must contain at least two values")
+        if not np.all(np.isfinite(prices)) or np.any(prices <= 0):
+            raise ValueError("prices must contain only finite positive values")
+        if not np.all(np.isfinite(predictions)):
+            raise ValueError("predictions must contain only finite values")
+
         print("=" * 60)
         print("开始回测")
         print("=" * 60)
@@ -66,16 +80,31 @@ class BacktestEngine:
             prices = prices[:min_len]
             predictions = predictions[:min_len]
             print(f"调整后数据长度: {min_len}")
+
+        if benchmark_returns is not None:
+            benchmark_returns = np.asarray(benchmark_returns, dtype=float).reshape(-1)
+            if len(benchmark_returns) < len(prices):
+                raise ValueError("benchmark_returns is shorter than the aligned price series")
+            benchmark_returns = benchmark_returns[:len(prices)]
+            if not np.all(np.isfinite(benchmark_returns)):
+                raise ValueError("benchmark_returns must contain only finite values")
         
         # 生成交易信号
         if signals is None:
             signals = self._generate_signals(predictions, strategy_type)
+        else:
+            signals = np.asarray(signals, dtype=float).reshape(-1)
+            if len(signals) < len(prices):
+                raise ValueError("signals is shorter than the aligned price series")
+            signals = signals[:len(prices)]
         
         # 运行回测
         results = self._execute_backtest(prices, signals, predictions)
         
         # 计算性能指标
-        performance_metrics = self._calculate_performance_metrics(results)
+        performance_metrics = self._calculate_performance_metrics(
+            results, benchmark_returns=benchmark_returns
+        )
         
         # 合并结果
         self.results = {**results, **performance_metrics}
@@ -152,6 +181,11 @@ class BacktestEngine:
                     signals[i] = -1  # 卖出
                 else:
                     signals[i] = 0  # 持有
+
+        else:
+            raise ValueError(
+                "strategy_type must be one of: simple, momentum, ml_enhanced"
+            )
         
         print(f"交易信号统计:")
         print(f"  买入信号: {np.sum(signals > 0)} 次")
@@ -220,28 +254,26 @@ class BacktestEngine:
                     signal = -1  # 触发止损
                     print(f"第{i}天: 触发止损，价格从{entry_price:.2f}跌至{current_price:.2f}")
                 elif position_return >= take_profit:
-                    signal = 1  # 触发止盈，可以考虑卖出或持有
-                    # 这里我们选择部分止盈
-                    if position_return > take_profit * 1.5:  # 如果盈利超过止盈点的1.5倍，卖出
-                        signal = -1
-                        print(f"第{i}天: 触发止盈，盈利{position_return:.2%}")
+                    signal = -1
+                    print(f"第{i}天: 触发止盈，盈利{position_return:.2%}")
             
             # 执行交易
-            if signal > 0 and capital > 0:  # 买入信号
-                # 计算可买入数量（全部买入）
+            if signal > 0 and capital > 0 and position == 0:  # 买入信号
+                # 计算可买入数量，并按实际成交额计算成本。
                 buy_amount = capital * 0.95  # 保留5%现金
-                commission_cost = buy_amount * self.commission
-                slippage_cost = buy_amount * self.slippage
-                total_cost = commission_cost + slippage_cost
-                
-                actual_buy_amount = buy_amount - total_cost
-                shares_to_buy = int(actual_buy_amount / current_price)
+                cost_rate = self.commission + self.slippage
+                shares_to_buy = int(buy_amount / (current_price * (1 + cost_rate)))
                 
                 if shares_to_buy > 0:
+                    trade_value = shares_to_buy * current_price
+                    commission_cost = trade_value * self.commission
+                    slippage_cost = trade_value * self.slippage
+                    total_cost = commission_cost + slippage_cost
+
                     # 更新持仓
-                    position += shares_to_buy
-                    entry_price = current_price  # 更新入场价格
-                    capital -= shares_to_buy * current_price + total_cost
+                    position = shares_to_buy
+                    entry_price = (trade_value + total_cost) / shares_to_buy
+                    capital -= trade_value + total_cost
                     
                     # 记录交易
                     trade_record = {
@@ -249,7 +281,7 @@ class BacktestEngine:
                         'type': 'BUY',
                         'price': current_price,
                         'shares': shares_to_buy,
-                        'value': shares_to_buy * current_price,
+                        'value': trade_value,
                         'commission': commission_cost,
                         'slippage': slippage_cost,
                         'capital_after': capital,
@@ -360,7 +392,7 @@ class BacktestEngine:
         
         return results
     
-    def _calculate_performance_metrics(self, results):
+    def _calculate_performance_metrics(self, results, benchmark_returns=None):
         """
         计算性能指标
         
@@ -368,6 +400,8 @@ class BacktestEngine:
         -----------
         results : dict
             回测结果
+        benchmark_returns : np.ndarray, optional
+            市场基准日收益率。未提供时不计算依赖基准的指标。
             
         Returns:
         --------
@@ -379,7 +413,7 @@ class BacktestEngine:
         
         # 计算年化收益率（假设252个交易日）
         total_return = results['total_return']
-        n_years = len(capital_history) / 252
+        n_years = max(len(capital_history) - 1, 1) / 252
         annual_return = (1 + total_return) ** (1 / n_years) - 1 if n_years > 0 else 0
         
         # 计算年化波动率
@@ -410,19 +444,27 @@ class BacktestEngine:
         # 计算卡尔玛比率
         calmar_ratio = annual_return / max_drawdown if max_drawdown > 0 else 0
         
-        # 计算beta（相对于市场的敏感性，这里简化计算）
-        # 注意：这里需要市场收益率数据，我们简化处理
-        market_returns = np.random.normal(0.0003, 0.01, len(returns_history))  # 模拟市场收益率
-        covariance = np.cov(returns_history, market_returns)[0, 1]
-        market_variance = np.var(market_returns)
-        beta = covariance / market_variance if market_variance > 0 else 1
-        
-        # 计算alpha
-        alpha = annual_return - (risk_free_rate + beta * (np.mean(market_returns) * 252 - risk_free_rate))
-        
-        # 计算信息比率
-        tracking_error = np.std(returns_history - market_returns) * np.sqrt(252)
-        information_ratio = (annual_return - np.mean(market_returns) * 252) / tracking_error if tracking_error > 0 else 0
+        # Alpha/Beta/信息比率必须基于真实基准，不能用随机序列替代。
+        beta = alpha = information_ratio = np.nan
+        if benchmark_returns is not None:
+            market_returns = np.asarray(benchmark_returns, dtype=float).reshape(-1)
+            aligned_len = min(len(returns_history), len(market_returns))
+            strategy_returns = returns_history[-aligned_len:]
+            market_returns = market_returns[-aligned_len:]
+            market_variance = np.var(market_returns)
+            if market_variance > 0:
+                covariance = np.cov(strategy_returns, market_returns)[0, 1]
+                beta = covariance / market_variance
+                market_annual_return = np.mean(market_returns) * 252
+                alpha = annual_return - (
+                    risk_free_rate + beta * (market_annual_return - risk_free_rate)
+                )
+                active_returns = strategy_returns - market_returns
+                tracking_error = np.std(active_returns) * np.sqrt(252)
+                if tracking_error > 0:
+                    information_ratio = (
+                        annual_return - market_annual_return
+                    ) / tracking_error
         
         # 计算风险调整收益
         risk_adjusted_return = total_return / max_drawdown if max_drawdown > 0 else 0
@@ -501,8 +543,6 @@ class BacktestEngine:
             图表保存路径
         """
         import matplotlib.pyplot as plt
-        import matplotlib.dates as mdates
-        
         if not self.results:
             print("请先运行回测！")
             return
@@ -554,9 +594,10 @@ class BacktestEngine:
         axes[2, 0].grid(True, alpha=0.3)
         
         # 6. 预测收益率 vs 实际信号
-        axes[2, 1].plot(self.results['predictions'][:100] * 100, label='预测收益率', alpha=0.7)
-        axes[2, 1].scatter(range(100), 
-                          self.results['signals'][:100] * 50,  # 放大信号便于观察
+        n_plot = min(100, len(self.results['predictions']), len(self.results['signals']))
+        axes[2, 1].plot(self.results['predictions'][:n_plot] * 100, label='预测收益率', alpha=0.7)
+        axes[2, 1].scatter(range(n_plot),
+                          self.results['signals'][:n_plot] * 50,  # 放大信号便于观察
                           color='red', s=20, label='交易信号', alpha=0.5)
         axes[2, 1].set_title('预测收益率与交易信号（前100天）', fontsize=14, fontweight='bold')
         axes[2, 1].set_xlabel('交易日')
@@ -565,6 +606,9 @@ class BacktestEngine:
         axes[2, 1].grid(True, alpha=0.3)
         
         plt.tight_layout()
+        save_dir = os.path.dirname(save_path)
+        if save_dir:
+            os.makedirs(save_dir, exist_ok=True)
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
         plt.show()
         
@@ -594,12 +638,16 @@ class BacktestEngine:
         })
         
         # 保存到CSV
+        output_dir = os.path.dirname(filename)
+        if output_dir:
+            os.makedirs(output_dir, exist_ok=True)
         results_df.to_csv(filename, index=False)
         print(f"回测结果已保存到: {filename}")
         
         # 保存交易记录
         if self.trade_log:
             trades_df = pd.DataFrame(self.trade_log)
+            os.makedirs('results', exist_ok=True)
             trades_df.to_csv('results/trade_log.csv', index=False)
             print(f"交易记录已保存到: results/trade_log.csv")
 
