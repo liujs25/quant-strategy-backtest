@@ -74,11 +74,11 @@ class DataPreprocessor:
         missing_before = data.isnull().sum().sum()
         print(f"清洗前缺失值总数: {missing_before}")
         
-        # 对于价格数据，使用前向填充（同一股票的前一天价格）
+        # 对于价格数据，只使用同一股票的历史值前向填充。
+        # 不使用后向填充，避免用未来价格填补过去数据造成时间泄露。
         price_columns = ['open', 'high', 'low', 'close', 'volume']
         for col in price_columns:
             data[col] = data.groupby('Name')[col].ffill()
-            data[col] = data.groupby('Name')[col].bfill()  # 如果开头有缺失，使用后向填充
         
         missing_after = data.isnull().sum().sum()
         print(f"清洗后缺失值总数: {missing_after}")
@@ -167,6 +167,13 @@ class DataPreprocessor:
             print("请先清洗数据！")
             return None, None, None
         
+        if lookback <= 0:
+            raise ValueError("lookback must be a positive integer")
+        if prediction_horizon <= 0:
+            raise ValueError("prediction_horizon must be a positive integer")
+        if target_column not in self.processed_data.columns:
+            raise ValueError(f"Target column not found: {target_column}")
+
         print(f"准备特征和目标变量，lookback={lookback}, horizon={prediction_horizon}")
         
         # 选择特征列（排除非数值列和日期列）
@@ -190,7 +197,7 @@ class DataPreprocessor:
         print(f"选择的特征: {selected_features}")
         
         # 为每只股票创建时间序列窗口
-        X_list, y_list = [], []
+        X_list, y_list, target_dates = [], [], []
         
         for name, group in self.processed_data.groupby('Name'):
             group = group.sort_values('date')
@@ -199,15 +206,25 @@ class DataPreprocessor:
             feature_matrix = group[selected_features].values
             
             # 创建时间序列窗口
-            for i in range(len(group) - lookback - prediction_horizon):
+            sample_count = len(group) - lookback - prediction_horizon + 1
+            for i in range(max(0, sample_count)):
                 X_window = feature_matrix[i:i+lookback]
                 y_window = group[target_column].iloc[i+lookback:i+lookback+prediction_horizon].values
-                
+
                 X_list.append(X_window)
                 y_list.append(y_window[-1])  # 只取最后一个预测值
+                target_dates.append(group['date'].iloc[i + lookback + prediction_horizon - 1])
         
         X = np.array(X_list)
         y = np.array(y_list)
+
+        # Group-by processing appends one stock at a time. Sort the finished
+        # windows by target date so the later index split is genuinely temporal
+        # across the full multi-stock dataset.
+        if target_dates:
+            order = np.argsort(np.asarray(target_dates), kind='stable')
+            X = X[order]
+            y = y[order]
         
         print(f"创建的时间序列窗口形状: X={X.shape}, y={y.shape}")
         
@@ -220,12 +237,19 @@ class DataPreprocessor:
             return
             
         # 确保目录存在
-        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+        output_dir = os.path.dirname(output_path)
+        if output_dir:
+            os.makedirs(output_dir, exist_ok=True)
         
         self.processed_data.to_csv(output_path, index=False)
         print(f"处理后的数据已保存到: {output_path}")
     
     def split_train_test(self, X, y, test_size=0.2, random_state=42):
+        if not 0 < test_size < 1:
+            raise ValueError("test_size must be between 0 and 1")
+        if len(X) != len(y):
+            raise ValueError("X and y must contain the same number of samples")
+
         # 按时间顺序划分（不打乱时间顺序）
         split_idx = int(len(X) * (1 - test_size))
         
