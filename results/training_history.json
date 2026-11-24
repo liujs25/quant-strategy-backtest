@@ -1,0 +1,136 @@
+[
+  {
+    "fold": "validation",
+    "model": "RandomForest",
+    "max_depth": 6,
+    "min_samples_leaf": 100,
+    "validation_mse": 0.00022670769425767976
+  },
+  {
+    "fold": "validation",
+    "model": "RandomForest",
+    "max_depth": 10,
+    "min_samples_leaf": 100,
+    "validation_mse": 0.0002266058052834793
+  },
+  {
+    "fold": "validation",
+    "model": "LSTM",
+    "epoch": 1,
+    "train_mse": 0.00016532758283469137,
+    "validation_mse": 0.00022725459332942753
+  },
+  {
+    "fold": "validation",
+    "model": "LSTM",
+    "epoch": 2,
+    "train_mse": 0.00016371913453644014,
+    "validation_mse": 0.00022871689587035735
+  },
+  {
+    "fold": "validation",
+    "model": "LSTM",
+    "epoch": 3,
+    "train_mse": 0.00016211774487694003,
+    "validation_mse": 0.00023017678801596274
+  },
+  {
+    "fold": "validation",
+    "model": "LSTM",
+    "epoch": 4,
+    "train_mse": 0.00016092014930866805,
+    "validation_mse": 0.00023107042169482088
+  },
+  {
+    "fold": "validation",
+    "model": "LSTM",
+    "epoch": 5,
+    "train_mse": 0.00015978001860731143,
+    "validation_mse": 0.00023256964894551583
+  },
+  {
+    "fold": "validation",
+    "model": "LSTM",
+    "epoch": 6,
+    "train_mse": 0.0001586377346236872,
+    "validation_mse": 0.0002340297963668019
+  },
+  {
+    "fold": "validation",
+    "model": "Transformer",
+    "epoch": 1,
+    "train_mse": 0.00016580244148460804,
+    "validation_mse": 0.00022782672652532608
+  },
+  {
+    "fold": "validation",
+    "model": "Transformer",
+    "epoch": 2,
+    "train_mse": 0.00016408648761153999,
+    "validation_mse": 0.0002280640329701997
+  },
+  {
+    "fold": "validation",
+    "model": "Transformer",
+    "epoch": 3,
+    "train_mse": 0.00016342544250796433,
+    "validation_mse": 0.0002288694147146308
+  },
+  {
+    "fold": "validation",
+    "model": "Transformer",
+    "epoch": 4,
+    "train_mse": 0.0001627950958367767,
+    "validation_mse": 0.00022845229794622794
+  },
+  {
+    "fold": "validation",
+    "model": "Transformer",
+    "epoch": 5,
+    "train_mse": 0.00016226934101468778,
+    "validation_mse": 0.0002292722983335964
+  },
+  {
+    "fold": "validation",
+    "model": "Transformer",
+    "epoch": 6,
+    "train_mse": 0.00016185601365892609,
+    "validation_mse": 0.00022918774751962554
+  },
+  {
+    "fold": "test_1",
+    "model": "LSTM",
+    "epoch": 1,
+    "train_mse": 0.00018315847878877663
+  },
+  {
+    "fold": "test_1",
+    "model": "Transformer",
+    "epoch": 1,
+    "train_mse": 0.00018344258816093008
+  },
+  {
+    "fold": "test_2",
+    "model": "LSTM",
+    "epoch": 1,
+    "train_mse": 0.00017915890322551994
+  },
+  {
+    "fold": "test_2",
+    "model": "Transformer",
+    "epoch": 1,
+    "train_mse": 0.00017951683147404297
+  },
+  {
+    "fold": "test_3",
+    "model": "LSTM",
+    "epoch": 1,
+    "train_mse": 0.00017381707462237088
+  },
+  {
+    "fold": "test_3",
+    "model": "Transformer",
+    "epoch": 1,
+    "train_mse": 0.00017413447674276476
+  }
+]

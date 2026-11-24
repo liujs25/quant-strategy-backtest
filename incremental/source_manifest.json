@@ -1,0 +1,18 @@
+{
+  "host": "Apple M5",
+  "compute": "CPU, single-thread LightGBM/OpenMP; no benefit expected from MPS for these workloads",
+  "publication": "no commit or push",
+  "git_head": "9b143e407ed878e0694564f953149d0456177433",
+  "files": {
+    "incremental/download_holdout.py": "6c60848bd56886b0d828eb40b898317480967ccad02bb96ae3becb1b187c3dd5",
+    "incremental/final.py": "889a204e18291aa973011d29782c7fa056b687c2f96ddb4504b79e6f3a4280df",
+    "incremental/diagnostics.py": "5fb30387d1121cf1c94d45cb922f823b6a124dcdebe577b7be878b5965ba29cc",
+    "incremental/core.py": "1ef2e42b19bc15f7cf108f8ff838e38dbc76577f1f8809b6be3415c398c55ad7",
+    "incremental/select.py": "b0fe03af30cc3e8a96be7c60cdbb9ccd4dbe9e20788ced3a7316a62647d07820",
+    "incremental/verify.py": "c81a58a6722843034c9c97c2f83a28c33aa2c5e78e562427fefb7ac50865b3a4",
+    "incremental/report.py": "f3079b35c2804576c07ba323d9aba193b090b5d8f962bbd223683a08d6f5397f",
+    "incremental/study.py": "3272a98c5eb66924c6af3eae687f2c0ebd12a57a7796d453a12382c4b6e3f370",
+    "incremental/protocol.json": "02e7f509d543985d53b5ddcd3900e2baaf2056c8741caf0a498e145c1bce0dc6",
+    "incremental/selection_lock.json": "a0295c5a7d2015f16bbd846d0ecc051082d499c9bd34e5bbed5e9359c4d96d0d"
+  }
+}

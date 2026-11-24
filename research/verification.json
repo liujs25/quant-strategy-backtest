@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "checks": [
+    "All saved daily NAVs, cash, marked positions, costs and compounded returns reconciled; available trade ledgers reconcile to final cash including dividends.",
+    "Fixed final universe and prediction dates verified; tree checkpoint replay on 256 evenly spaced observations passed when applicable.",
+    "Final portfolio summary recomputed independently from daily returns.",
+    "Appending final data leaves 512 development feature vectors unchanged; rank reference universe is consistent."
+  ]
+}

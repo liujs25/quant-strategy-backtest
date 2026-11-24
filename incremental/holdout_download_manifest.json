@@ -1,0 +1,447 @@
+{
+  "source": "Yahoo Finance via yfinance",
+  "requested_start": "2026-01-01",
+  "exclusive_end": "2026-11-21",
+  "files": [
+    {
+      "symbol": "AAL",
+      "rows": 224,
+      "sha256": "ddcd4e56b0f1ad93e1156ddd3acd98a869cd52101f05c6e7e5e7a5f0d4428055"
+    },
+    {
+      "symbol": "AAPL",
+      "rows": 224,
+      "sha256": "3491be29924427e595cd63f788836ced2b3a53d310d1b3ac069302e696d91712"
+    },
+    {
+      "symbol": "ABBV",
+      "rows": 224,
+      "sha256": "0cec37e8f85b310677bb94c3826ffb2d851516de0f6c6f90b495c753f974dcb4"
+    },
+    {
+      "symbol": "ABT",
+      "rows": 224,
+      "sha256": "ed925efd77b590714189d14da1977cf37681e949d127abb43d17d8dd4d2f5709"
+    },
+    {
+      "symbol": "AIG",
+      "rows": 224,
+      "sha256": "6f67881b25680f65964904d5ebd2c3e5b0ef539e2047b12990d073e723fff5a2"
+    },
+    {
+      "symbol": "AMAT",
+      "rows": 224,
+      "sha256": "5ef0efecbf875b7a53791e1dfda025633e90548769c9b7457010936eec573324"
+    },
+    {
+      "symbol": "AMGN",
+      "rows": 224,
+      "sha256": "3826ad3a435bc6785f5952fcc089df352ea09bbe6794aae2fd38298e49615ead"
+    },
+    {
+      "symbol": "AMZN",
+      "rows": 224,
+      "sha256": "21232e701544ddd2b39fb59a04b3d4b63d80c339d805a14ba9b65020ae62ab19"
+    },
+    {
+      "symbol": "AVGO",
+      "rows": 224,
+      "sha256": "8e241739ee3c50c8ff87ca7917083c0e61de6d1299220e528519c6feb37739fb"
+    },
+    {
+      "symbol": "AXP",
+      "rows": 224,
+      "sha256": "36725c6362990f95825261204d5d1f96e926dc04339981407d65289f9831f03d"
+    },
+    {
+      "symbol": "BA",
+      "rows": 224,
+      "sha256": "ba10be4415a6e371fdba015c2686264161174b5a589a4bca55a35b2557364a65"
+    },
+    {
+      "symbol": "BAC",
+      "rows": 224,
+      "sha256": "c4cf2f72b6b014787817f7f803123997be056843d1b9cb2f81740ea60605f4b7"
+    },
+    {
+      "symbol": "BIIB",
+      "rows": 224,
+      "sha256": "934887593ff1837756846f332a20786dc7ba808a96ac829015741122b8dd9e39"
+    },
+    {
+      "symbol": "BMY",
+      "rows": 224,
+      "sha256": "f8d22d5ea470e0800317cc695e5f5db0ac488e015bf727e3b8ee4c1ff01d3d90"
+    },
+    {
+      "symbol": "BRK.B",
+      "rows": 224,
+      "sha256": "95336bef4a8f8a9734f7e214bfa3af0021e005def166854fdc18590278fbec92"
+    },
+    {
+      "symbol": "C",
+      "rows": 224,
+      "sha256": "92989e9b71255cb6c16e659dda0d3f86736096e786609ec6fcd12bf06a4ac364"
+    },
+    {
+      "symbol": "CAT",
+      "rows": 224,
+      "sha256": "137b3f2170aa93db03101ccffc644a1f581655050fe21bcf258ee36e4ccc87e1"
+    },
+    {
+      "symbol": "CHTR",
+      "rows": 224,
+      "sha256": "e760d0aab08435e2b311f57eea3e212bf09cb4676c02003759d7eeea16be713e"
+    },
+    {
+      "symbol": "CMCSA",
+      "rows": 224,
+      "sha256": "f61c0533d46d87db2fafc7158a56a8f0de83d2dd93780b3f8bc9fabd076486e0"
+    },
+    {
+      "symbol": "CMG",
+      "rows": 224,
+      "sha256": "a82939b65fa48fa83dc41c2f4b8961b9d2390062c5d4f11413932cb91fcd8c8c"
+    },
+    {
+      "symbol": "COP",
+      "rows": 224,
+      "sha256": "7d1eb2055f841a7f64c9b9b93300dedd6a1ca8ca3737dd397b47a57feb7db24c"
+    },
+    {
+      "symbol": "COST",
+      "rows": 224,
+      "sha256": "e0276a9d8fe2f24ddabb6367bc2407fcb8aff5cc64a706ea5317a430b9828930"
+    },
+    {
+      "symbol": "CRM",
+      "rows": 224,
+      "sha256": "03596e8df340d3569c6da4d62ba372ee7ad5c87e2577d2a6832ea17230ad95a9"
+    },
+    {
+      "symbol": "CSCO",
+      "rows": 224,
+      "sha256": "e921e88eb36f3e72420af5118d92e33d8b1637736eb45f3e516fad3ffb65f032"
+    },
+    {
+      "symbol": "CVS",
+      "rows": 224,
+      "sha256": "49de1ee0dbafef53252ec3f2f8e4f3abbddcdf84156dc88d38377005f966346e"
+    },
+    {
+      "symbol": "CVX",
+      "rows": 224,
+      "sha256": "af61f3ef3c64fd81edc4f017daa2ce2776cd49a71ef9146d44fb6a679559a5aa"
+    },
+    {
+      "symbol": "DAL",
+      "rows": 224,
+      "sha256": "cee1debf96d249d088aa31201bf32198f8c1e902424d3b993bd9bc1841f0137c"
+    },
+    {
+      "symbol": "DIS",
+      "rows": 224,
+      "sha256": "202247e9cabfa82e41f2c040ab979c5cca0130b9f21c6166837c284a176808a9"
+    },
+    {
+      "symbol": "EOG",
+      "rows": 224,
+      "sha256": "d72292e6ff4419d34869bce6165d1b7f51463c6ebf45df11a32bdcc1d8136a95"
+    },
+    {
+      "symbol": "F",
+      "rows": 224,
+      "sha256": "d6aff1713f4a98dd80781bd2750094b7bc950a95cbabb39c9792d4fc763e18df"
+    },
+    {
+      "symbol": "FCX",
+      "rows": 224,
+      "sha256": "21d20f8c4e172ac351f80d2a3a18eb63110312ebc356c612314e552fe3b5046d"
+    },
+    {
+      "symbol": "GE",
+      "rows": 224,
+      "sha256": "faec46c6d4e2db290344f8924b1e09bfdd79ee9149cc63f4e7ac9049cbe37587"
+    },
+    {
+      "symbol": "GILD",
+      "rows": 224,
+      "sha256": "be5ab29d8aef12021ff03a54c0d60c06c1afec7d44c9f69a1828c6b79c804c8b"
+    },
+    {
+      "symbol": "GM",
+      "rows": 224,
+      "sha256": "726b52f72934e8fc52f9e9a4126565939f80ff17e4e22f9592827d2d4c240179"
+    },
+    {
+      "symbol": "GOOG",
+      "rows": 224,
+      "sha256": "1acfde47a4b126b4625f4a16d35292fdaa8875830fc82ebfaf72b2cf4df6980e"
+    },
+    {
+      "symbol": "GOOGL",
+      "rows": 224,
+      "sha256": "69f0ea9dbe7c77e312827cd5c9430371858de55eb6973173754a43d410beae36"
+    },
+    {
+      "symbol": "GS",
+      "rows": 224,
+      "sha256": "912137a944553e55a6a8076f26b553094294037e0c192fcbf55453aef1d38ff1"
+    },
+    {
+      "symbol": "HAL",
+      "rows": 224,
+      "sha256": "bee31982c52d617acd3364381767b87cf722ae88ccbef9b6bcb7fa27819eb952"
+    },
+    {
+      "symbol": "HD",
+      "rows": 224,
+      "sha256": "d659a32e9b4b513b03778ac14ae7495e85cf4fe69fc8fe62d4c0581105bd96e7"
+    },
+    {
+      "symbol": "HON",
+      "rows": 224,
+      "sha256": "f43a04c9866f94d5aab6c8b7bf9b0105a09ca8b23de91378460cef09bac6fcc1"
+    },
+    {
+      "symbol": "IBM",
+      "rows": 224,
+      "sha256": "e0e3743da534d166c46fd67e89ff5b73565d90ff27a694ad17cc85405cc02815"
+    },
+    {
+      "symbol": "INTC",
+      "rows": 224,
+      "sha256": "222e056bf3fdee66988225432c46157f9b02d44fcbe4ea9a86281ad0d38a1090"
+    },
+    {
+      "symbol": "JNJ",
+      "rows": 224,
+      "sha256": "07934d46372bd25579310995798d5b584c4d8082f6806587f0c20d9ac672d8f8"
+    },
+    {
+      "symbol": "JPM",
+      "rows": 224,
+      "sha256": "c0eea54ac3cfc5e42e3b4d07af49e24565fdd8b9b51cf24bd67e340fe55151b6"
+    },
+    {
+      "symbol": "KMI",
+      "rows": 224,
+      "sha256": "9245f77ecff46e6b3473bdac3d8d5bf8f062f24f59e2b799b96ff25f901c5e6e"
+    },
+    {
+      "symbol": "KO",
+      "rows": 224,
+      "sha256": "e484502cf4b05973d5305a80be91e7741da6df618ad06e0a149d4af00a84a27f"
+    },
+    {
+      "symbol": "KR",
+      "rows": 224,
+      "sha256": "9715d10ebf33a05b07854fda81644cf2fab94d48b41cb612ab5fa7cc570adafd"
+    },
+    {
+      "symbol": "LLY",
+      "rows": 224,
+      "sha256": "0047defdbfe559d55ab6ed9d62e50b8c111af7665d61fe1e59ad8d355b8b55fd"
+    },
+    {
+      "symbol": "LMT",
+      "rows": 224,
+      "sha256": "7daf2421dcba5b5de9cf7a92841aa13f5bdfa36a9ce86a348df4f016c9ce9376"
+    },
+    {
+      "symbol": "LOW",
+      "rows": 224,
+      "sha256": "70a9b112ce80f86b4a412fce2a384201efca31a7fb35124ff63975c56d359183"
+    },
+    {
+      "symbol": "MA",
+      "rows": 224,
+      "sha256": "8b989709f4a1cd43f7a327bdeda1e74e21926ef91062ec418ad756b42dc474fc"
+    },
+    {
+      "symbol": "MCD",
+      "rows": 224,
+      "sha256": "cfbba2ca150740c80e21cafbb260dd36923678f4cc99d375b4cf0e2e0afa2ef2"
+    },
+    {
+      "symbol": "MDLZ",
+      "rows": 224,
+      "sha256": "ca46e70c2133e12cdb9ae1009a5c39a9fdce10c415fc72d290a6ce56e43759f1"
+    },
+    {
+      "symbol": "MDT",
+      "rows": 224,
+      "sha256": "7a8c092d0f500f3a31a3ed854203e0e12924e28720efbef1535630b263370542"
+    },
+    {
+      "symbol": "MET",
+      "rows": 224,
+      "sha256": "68a16790764a9badf914508c262ff874fa437533a8b74ee432606750604d642e"
+    },
+    {
+      "symbol": "MMM",
+      "rows": 224,
+      "sha256": "0d7b27dba9ff858e9edd9714df5bda61f4d504dfa2aead48798df61a0ec660b2"
+    },
+    {
+      "symbol": "MO",
+      "rows": 224,
+      "sha256": "8c82bec408d1aeabe141fb99c86e67c3d1dd83fa438c7987b09f0068fae36eee"
+    },
+    {
+      "symbol": "MRK",
+      "rows": 224,
+      "sha256": "fb6358454ed2351b133b7ee21e9bc04a6bacd5f60b70a737530aca79514c35c0"
+    },
+    {
+      "symbol": "MS",
+      "rows": 224,
+      "sha256": "1dc2e9bc815038a9059de3be9a5d1e17cbc9dc69067a681883fbc1be73ccd047"
+    },
+    {
+      "symbol": "MSFT",
+      "rows": 224,
+      "sha256": "5945f3b65f66546a1a1cbfa9b43aae6610a93d206c5ae05caea965d6c488b6e3"
+    },
+    {
+      "symbol": "MU",
+      "rows": 224,
+      "sha256": "7f95fe05f8dca7321fee7cf19b62d3143516d60a8576a0f51fb703d69664a92a"
+    },
+    {
+      "symbol": "NFLX",
+      "rows": 224,
+      "sha256": "26783d284f8ad93dc52f8e4cc2e5ee05f331fc8d4ca4d97052618842bf322808"
+    },
+    {
+      "symbol": "NKE",
+      "rows": 224,
+      "sha256": "0317cc0fd0fbda54872b138675517fd29675d6968ad0a26363e523b2071372c1"
+    },
+    {
+      "symbol": "NVDA",
+      "rows": 224,
+      "sha256": "9535982810e1a8692e21774cb19d3548cacdcc2a6f2b0c88c2b7e6baefb40c01"
+    },
+    {
+      "symbol": "ORCL",
+      "rows": 224,
+      "sha256": "7dd90f2215444ee47f0cb35f62d035f84088c546be310d30ff8b047cfdaf194e"
+    },
+    {
+      "symbol": "OXY",
+      "rows": 224,
+      "sha256": "b1b0c58ef8123f35832215c2850741343be3de662f5f152aca855d6221024552"
+    },
+    {
+      "symbol": "PEP",
+      "rows": 224,
+      "sha256": "aeeef855cfa1d55f90f2446f33f8350a3c0ab3614d455b2271aec74b16297f4e"
+    },
+    {
+      "symbol": "PFE",
+      "rows": 224,
+      "sha256": "70c7877c43a6ec9e746b1ad738b8172c0aafe8648ab122a8029e65ebe5d84b22"
+    },
+    {
+      "symbol": "PG",
+      "rows": 224,
+      "sha256": "07e02e45dc4ab4c43964320b3a1d08e0412272765cef436f49551619cfe557f1"
+    },
+    {
+      "symbol": "PM",
+      "rows": 224,
+      "sha256": "8dd1d6d0f9928d9084869c37b38a56d8e16a212e62fd7e952321b48d95413d72"
+    },
+    {
+      "symbol": "PYPL",
+      "rows": 224,
+      "sha256": "35e7f82eb9b251bd77a14cdbe8e4e7e47e3b856cba9e63f2894a2ddc21be09a8"
+    },
+    {
+      "symbol": "QCOM",
+      "rows": 224,
+      "sha256": "4fd247e75e60f021c20bef55bf1105debb61c7fc2f1136908673dae7732723cd"
+    },
+    {
+      "symbol": "REGN",
+      "rows": 224,
+      "sha256": "d38d6d7c4ad7e3ea0364a385ec0278c84f2326da2bee845d85e20869578b6331"
+    },
+    {
+      "symbol": "SBUX",
+      "rows": 224,
+      "sha256": "33c914c87b26726984b472aef747cb8d9d689106da6baa097603299ebca82e6c"
+    },
+    {
+      "symbol": "SLB",
+      "rows": 224,
+      "sha256": "e8c0aff8cdf75cd49e9e8a8725c2a1888216fc7c5aec672a644623b50fbe223a"
+    },
+    {
+      "symbol": "T",
+      "rows": 224,
+      "sha256": "0810626112cdb13a84314d1c009eafeb215458cfb1a1e83dcc443f8371bd404c"
+    },
+    {
+      "symbol": "TGT",
+      "rows": 224,
+      "sha256": "adcf67a6e7c145c2b0612623124b3bc1312fa818fd07b54da3c2ac3402d1ce3b"
+    },
+    {
+      "symbol": "TXN",
+      "rows": 224,
+      "sha256": "b6bb142b3bfd89f2a43cfb63c4b19c0daf59be8f74d3257b2148c5b354bc7e51"
+    },
+    {
+      "symbol": "UNH",
+      "rows": 224,
+      "sha256": "93aebaad1c82c5287e50e230f6d93891eff3708e21df8767cc578a018ae5ae2d"
+    },
+    {
+      "symbol": "UNP",
+      "rows": 224,
+      "sha256": "6542cbb17171ea424492919b76eece8c35c774869b7a39149ef662ede029f9c7"
+    },
+    {
+      "symbol": "USB",
+      "rows": 224,
+      "sha256": "aa173194b7cc076f2737c135cbd4bcee84e95892194845ae94ddccd555c7e634"
+    },
+    {
+      "symbol": "V",
+      "rows": 224,
+      "sha256": "ac2a973fc10a98d83ba36e78f7ab987608090d8c851747ad6a17f6899ddc9390"
+    },
+    {
+      "symbol": "VLO",
+      "rows": 224,
+      "sha256": "172f6bfa776a0b1adc1f6b61cec017afd8a9aeff2ade676d47566c89cfffe598"
+    },
+    {
+      "symbol": "VZ",
+      "rows": 224,
+      "sha256": "acef08a5f30bba569a68941343e335ac07fa22ce50e15fe9155b8eccd811e6fd"
+    },
+    {
+      "symbol": "WFC",
+      "rows": 224,
+      "sha256": "7d6fcfec40b8f9b943c49fed2c92f61d7558631eed50cc0b3f5bfcde39dc9a0c"
+    },
+    {
+      "symbol": "WMT",
+      "rows": 224,
+      "sha256": "001f96cc739f57e1bb1e8544ebcbeabfc59a99114df4971adaa3452ae65224fb"
+    },
+    {
+      "symbol": "WYNN",
+      "rows": 224,
+      "sha256": "2f02fda199774ce4f1b0771b63af8a64dcd910fd45cb7eeed8e6c43c010aa12f"
+    },
+    {
+      "symbol": "XOM",
+      "rows": 224,
+      "sha256": "a5b63eba359a5b0da127060d949306b8df4920e76c4df8db72f3b440f8d44b4f"
+    }
+  ]
+}

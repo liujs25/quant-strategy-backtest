@@ -1,0 +1,4 @@
+Native OpenMP crash before first output: switched boosting to one CPU thread.
+Validation audit found BIIB had high==low on 2023-06-09. Close-location is now defined as neutral zero for a zero range, rather than dropping a tradable security. Initial trial results retained in superseded_zero_range. All trials rerun with the consistent definition; no final data has been downloaded.
+
+Post-reveal verification repair: development ranks were built over all 88 downloaded reference names before filtering to 87 tradable names. Initial final code ranked 87. Corrected final to frozen development reference set (including PYPL solely for rank features), filtering trading eligibility afterward. Newly responding final-only ticker strings FB/PCLN are excluded from the frozen reference universe. No selection or model settings changed. First reveal archived in superseded_final_rank_reference; corrected result is not a newly untouched experiment. Both results reported.

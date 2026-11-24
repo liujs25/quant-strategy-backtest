@@ -1,43 +1,22 @@
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-env/
-venv/
 .venv/
-ENV/
-env.bak/
-venv.bak/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# Data files
-data/raw/*.csv
-!data/raw/.gitkeep
-data/processed/*.csv
-!data/processed/.gitkeep
-
-# Results
-results/figures/*
-!results/figures/.gitkeep
-!results/figures/*.png
-!results/figures/*.jpg
-!results/figures/*.jpeg
-!results/figures/*.gif
-
-# OS
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
 .DS_Store
-Thumbs.db
+results_reproduction/
 
-# Logs
-logs/
+# Provider downloads: retrieve locally using the recorded requests and hashes.
+data/raw/
+research/development_raw/*.csv
+research/final_raw/*.csv
+incremental/holdout_raw/
+
+# Rebuildable intermediate panels and duplicated local snapshots.
+research/development_panel.pkl
+incremental/development_panel.pkl
+incremental/risk_returns.pkl
+incremental/predictions_fold*.pkl
+research/superseded_zero_range/
+research/superseded_final_rank_reference/final_predictions.csv.gz
+audit/baseline_verified_20261124.zip
 *.log

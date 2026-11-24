@@ -1,0 +1,27 @@
+{
+  "strategy": "residual_no_volume_tilt",
+  "risk": "diversified",
+  "gate_passed": false,
+  "selection": {
+    "strategy": "residual_no_volume_tilt",
+    "risk": "diversified",
+    "mean_active_ir": 0.9268874809774481,
+    "positive_both": true,
+    "mean_sharpe_gain": 0.04286448816986502,
+    "worst_drawdown_difference": 0.0008568063413586513,
+    "eligible": false
+  },
+  "traditional_champion": {
+    "strategy": "momentum",
+    "risk": "responsive"
+  },
+  "final_fit_label_end_exclusive": "2024-10-01",
+  "final_period": [
+    "2026-01-01",
+    "2026-11-20"
+  ],
+  "protocol_sha256": "02e7f509d543985d53b5ddcd3900e2baaf2056c8741caf0a498e145c1bce0dc6",
+  "development_results_sha256": "6b3d6f6e013dcccb2a0f171d51b80e1ca1be33a92802e40a763b0c7332fae1cb",
+  "publication": "LOCAL ONLY",
+  "interpretation": "exploratory challenger; failed development gate"
+}

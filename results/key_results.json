@@ -1,28 +1,175 @@
 {
-    "performance_metrics": {
-        "annual_return": 0.182,
-        "sharpe_ratio": 1.4,
-        "max_drawdown": 0.123,
-        "win_rate": 0.587,
-        "total_return": 0.396,
-        "final_capital": 139600.0
+  "predictive": [
+    {
+      "split": "test",
+      "model": "zero",
+      "n": 138894,
+      "rmse": 0.012038643608275591,
+      "mae": 0.008375242995291748,
+      "r2": -0.000306692491797822,
+      "directional_accuracy": 0.008675680734948954,
+      "ic": null,
+      "rank_ic": null,
+      "icir": null,
+      "ic_valid_days": 0
     },
-    "model_performance": {
-        "lstm": {
-            "rmse": 0.0124,
-            "r2": 0.248,
-            "training_time": 45.2
-        },
-        "transformer": {
-            "rmse": 0.0131,
-            "r2": 0.221,
-            "training_time": 68.7
-        }
+    {
+      "split": "test",
+      "model": "historical_mean",
+      "n": 138894,
+      "rmse": 0.012037701346397875,
+      "mae": 0.00836923866916079,
+      "r2": -0.00015011106844076139,
+      "directional_accuracy": 0.5136578973893761,
+      "ic": null,
+      "rank_ic": null,
+      "icir": null,
+      "ic_valid_days": 0
     },
-    "data_statistics": {
-        "total_records": 619040,
-        "stocks": 505,
-        "time_period": "2013-02-08 to 2018-02-07",
-        "features": 16
+    {
+      "split": "test",
+      "model": "ARIMA",
+      "n": 138894,
+      "rmse": 0.012046435459310839,
+      "mae": 0.008375434685340882,
+      "r2": -0.0016019817868686559,
+      "directional_accuracy": 0.510691606548879,
+      "ic": 0.017570029040425622,
+      "rank_ic": 0.016298778542904683,
+      "icir": 0.17997541092344552,
+      "ic_valid_days": 277
+    },
+    {
+      "split": "test",
+      "model": "RandomForest",
+      "n": 138894,
+      "rmse": 0.01204843793653845,
+      "mae": 0.008378387682591176,
+      "r2": -0.001935001769221012,
+      "directional_accuracy": 0.5048382219534321,
+      "ic": -0.005621447905646105,
+      "rank_ic": -0.0071999407979050295,
+      "icir": -0.04752853674285816,
+      "ic_valid_days": 277
+    },
+    {
+      "split": "test",
+      "model": "LSTM",
+      "n": 138894,
+      "rmse": 0.012056187366787948,
+      "mae": 0.008380779727500063,
+      "r2": -0.003224284653953191,
+      "directional_accuracy": 0.5084236900082078,
+      "ic": -0.002655471691514319,
+      "rank_ic": -0.0007256847182109568,
+      "icir": -0.021633916563738156,
+      "ic_valid_days": 277
+    },
+    {
+      "split": "test",
+      "model": "Transformer",
+      "n": 138894,
+      "rmse": 0.012059456641644489,
+      "mae": 0.008378605293812479,
+      "r2": -0.0037684468377574554,
+      "directional_accuracy": 0.5159834118104454,
+      "ic": 0.010870157165764519,
+      "rank_ic": 0.013586623841018986,
+      "icir": 0.09507205097050819,
+      "ic_valid_days": 277
     }
+  ],
+  "portfolio": [
+    {
+      "split": "test",
+      "model": "zero",
+      "annualized_return": 0.0,
+      "total_return": 0.0,
+      "sharpe": null,
+      "max_drawdown": -0.0,
+      "mean_daily_turnover": 0.0,
+      "annualized_turnover": 0.0,
+      "transaction_costs": 0.0,
+      "final_equity": 100000.0,
+      "days": 277
+    },
+    {
+      "split": "test",
+      "model": "historical_mean",
+      "annualized_return": 0.0,
+      "total_return": 0.0,
+      "sharpe": null,
+      "max_drawdown": -0.0,
+      "mean_daily_turnover": 0.0,
+      "annualized_turnover": 0.0,
+      "transaction_costs": 0.0,
+      "final_equity": 100000.0,
+      "days": 277
+    },
+    {
+      "split": "test",
+      "model": "ARIMA",
+      "annualized_return": -0.0026610635677699612,
+      "total_return": -0.00292467156097731,
+      "sharpe": -0.05597006469065871,
+      "max_drawdown": 0.05342984391702288,
+      "mean_daily_turnover": 0.14584066423396255,
+      "annualized_turnover": 36.751847386958566,
+      "transaction_costs": 6034.655486143504,
+      "final_equity": 99707.53284390227,
+      "days": 277
+    },
+    {
+      "split": "test",
+      "model": "RandomForest",
+      "annualized_return": -0.028873405647877104,
+      "total_return": -0.03169197590921746,
+      "sharpe": -1.9228856496050841,
+      "max_drawdown": 0.035710643172334966,
+      "mean_daily_turnover": 0.03490215455217515,
+      "annualized_turnover": 8.795342947148137,
+      "transaction_costs": 1422.5868963046837,
+      "final_equity": 96830.80240907826,
+      "days": 277
+    },
+    {
+      "split": "test",
+      "model": "LSTM",
+      "annualized_return": -0.05671820585783782,
+      "total_return": -0.06216653991211263,
+      "sharpe": -2.1992452669380955,
+      "max_drawdown": 0.06783842759068104,
+      "mean_daily_turnover": 0.10807284519611357,
+      "annualized_turnover": 27.23435698942062,
+      "transaction_costs": 4339.266601027988,
+      "final_equity": 93783.34600878874,
+      "days": 277
+    },
+    {
+      "split": "test",
+      "model": "Transformer",
+      "annualized_return": -0.02302503578612236,
+      "total_return": -0.025280157376850076,
+      "sharpe": -1.8421002690699466,
+      "max_drawdown": 0.03331274107920634,
+      "mean_daily_turnover": 0.05911365188860231,
+      "annualized_turnover": 14.896640275927783,
+      "transaction_costs": 2414.765537848078,
+      "final_equity": 97471.98426231499,
+      "days": 277
+    },
+    {
+      "split": "test",
+      "model": "buy_hold",
+      "annualized_return": 0.1879041480779129,
+      "total_return": 0.20837070630976395,
+      "sharpe": 1.7487228911293649,
+      "max_drawdown": 0.08060443506403536,
+      "mean_daily_turnover": 0.0071836886055246015,
+      "annualized_turnover": 1.8102895285921996,
+      "transaction_costs": 331.3032347876625,
+      "final_equity": 120837.07063097639,
+      "days": 277
+    }
+  ]
 }

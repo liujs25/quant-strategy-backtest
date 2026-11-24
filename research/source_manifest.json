@@ -1,0 +1,27 @@
+{
+  "host": "Apple M5",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "device_neural": "mps",
+  "boosting_threads": 1,
+  "publication": "local only, no commits or pushes",
+  "source_sha256": {
+    "progress_manifest.py": "b9afbcf3c9f8869740753a37afe844a54a403399e753ca3f627425ac4bf203db",
+    "controls.py": "6309bf192ff5c7e0d974bb60174169510a28d98bdf2d9136c2d601ac3633ceba",
+    "final.py": "9015de249d7fbd1468cda8298614c28d5db25572f00bc35687c7317180d67211",
+    "additional_diagnostics.py": "9982a7e029bf0f0c2afd36658a9d2073c9b677589efcb4f9e443cd55abb22db2",
+    "diagnostics.py": "7ace6eb321f221d905c842bed4179fb55542397b7076b6386fceed949bc53550",
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "engine.py": "58a0dd3d54dbd0eb78d2dfbc586d87d9ca140b5a49f9ccc61c0875fae6fc11d2",
+    "robustness.py": "ff37c734bbafb0a0529aa1efb2b5b8dc43a1a1623951bedd5bdb1b7aaf6af437",
+    "search.py": "a852b13c48dfd2405c1986a9e23ca280f7547a1cbd0b3fba172d5ac18edc5dc6",
+    "select.py": "46deb2c06dfd6709bb68cb91d8c83b3aa93594999ceb6e59ed3c1c1be759ff18",
+    "verify.py": "468ed856fe593ffcead54703a6dbe5f3c9c86a109f6eb1b8c5987fc9570b4371",
+    "replay_validation.py": "9b4323d53cc102018175fa305ae98f5a165709988397a4d0b36d1cb33d5dfb25",
+    "cost_stress.py": "1cd7f960e484deac5dee99600995599efe8e4a571507b927aaa7291bcb664d64",
+    "report.py": "015517ca8012181b5d57366766a6a37b2a231de7b4a9a6fd1cd3640be1e35adf",
+    "align_validation.py": "9f2e3b3665a2b784a6f2ba96b8481a5ebf9793be6bb8d88d5d4fb1f13f1405a5",
+    "protocol.json": "0d6ed9fbb692dda177fb0be2613ffec3e96eebb31389b260d476f644106a1a50",
+    "trial_plan.json": "9db18ba687922b2beae3fee88a6a5fb3e16695d631fad6427b9989bbbe160e57"
+  },
+  "baseline_commit": "9b143e407ed878e0694564f953149d0456177433"
+}

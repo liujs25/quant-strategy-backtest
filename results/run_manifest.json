@@ -1,0 +1,18 @@
+{
+  "completed": true,
+  "device": "mps",
+  "torch": "2.15.0",
+  "python": "3.12.14",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "seconds": 318.4417099952698,
+  "data_sha256": "6aea253cd19de60b568143991aaf1fa482456565c389205658d236e595e716cf",
+  "protocol_sha256": "d2ba16475b229287d69ea0160c604295e176c78423b11566b6909dbcf9281d4b",
+  "source_sha256": {
+    "src/data_preprocessing.py": "d954c84dc36d3414b17492bf3d38bc172d2b5f5a621ca11a2b81388bdb42a5c8",
+    "src/models.py": "423bf65fa8fab8a8f194a2c88577c38b576a0b06d9ef7c54cc8e1806ecda3283",
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/experiment.py": "8eaff9a520b2430dcd74289972240705a8d362fc2f8de08802a372770018fbd2",
+    "src/utils.py": "8739cc306088d0128ace8c94bcd898e5710278ecbff2024b0ec018f6a46000b6",
+    "src/backtest.py": "9fa1a200a3a76d2e505e5c1badafde2c8b78e2415d056fcb6ca68ce0ee076cc9"
+  }
+}

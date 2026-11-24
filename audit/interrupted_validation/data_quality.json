@@ -1,0 +1,19 @@
+{
+  "rows": 619040,
+  "symbols": 505,
+  "start": "2013-02-08 00:00:00",
+  "end": "2018-02-07 00:00:00",
+  "missing": {
+    "date": 0,
+    "open": 11,
+    "high": 8,
+    "low": 8,
+    "close": 0,
+    "volume": 0,
+    "Name": 0
+  },
+  "duplicate_keys": 0,
+  "raw_rows": 619040,
+  "tickers": 505,
+  "invalid_windows": 17698
+}

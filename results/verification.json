@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "checks": [
+    "validation: 128 checkpoint replay samples per model passed",
+    "test_1: 128 checkpoint replay samples per model passed",
+    "test_2: 128 checkpoint replay samples per model passed",
+    "test_3: 128 checkpoint replay samples per model passed",
+    "All predictive metrics recomputed",
+    "All daily NAV, cash, compounded returns, transaction costs and trade P&L reconciled",
+    "RMSE/R\u00b2 common-target variance identities verified"
+  ]
+}

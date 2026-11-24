@@ -1,0 +1,64 @@
+{
+  "seed": 42,
+  "lookback": 20,
+  "features": [
+    "ret1",
+    "ret5",
+    "ret20",
+    "intraday",
+    "range",
+    "gap",
+    "vol20",
+    "volume_ratio"
+  ],
+  "target": "next session close/open - 1; signal after previous close",
+  "validation": [
+    "2016-01-04",
+    "2016-12-30"
+  ],
+  "test_folds": [
+    [
+      "2017-01-03",
+      "2017-06-30"
+    ],
+    [
+      "2017-07-03",
+      "2017-12-29"
+    ],
+    [
+      "2018-01-02",
+      "2018-02-07"
+    ]
+  ],
+  "purge": "training target date strictly before earliest evaluation raw feature start (40 market sessions)",
+  "neural_max_epochs": 6,
+  "neural_selection": "lowest 2016 validation MSE epoch; freeze epochs for test refits",
+  "rf_candidates": [
+    {
+      "max_depth": 6,
+      "min_samples_leaf": 100
+    },
+    {
+      "max_depth": 10,
+      "min_samples_leaf": 100
+    }
+  ],
+  "rf_n_estimators": 80,
+  "arima_order": [
+    1,
+    0,
+    0
+  ],
+  "arima_min_observations": 100,
+  "threshold": 0.003,
+  "strategy": "top 20 forecasts strictly above fixed threshold; 1/20 NAV per slot including entry costs; flat overnight",
+  "one_way_cost": 0.0015,
+  "cost_components": {
+    "commission": 0.001,
+    "slippage": 0.0005
+  },
+  "initial_capital": 100000,
+  "benchmark": "fixed equal-dollar basket of 20 highest median dollar-volume stocks during 2016; buy first test open, hold to final test close",
+  "test_policy": "no test selection; expanding refits use only earlier labels after purge; all models same observations",
+  "uncertainty": "paired moving-block bootstrap of daily MSE improvement versus zero, block 20, 2000 resamples, seed 42"
+}

@@ -1,0 +1,595 @@
+{
+  "source": "Yahoo Finance via yfinance",
+  "requested_start": "2010-01-01",
+  "exclusive_end": "2024-01-01",
+  "files": [
+    {
+      "symbol": "AAPL",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "b77c711352f1dedaefbf8b5b07fed9c85f823f21cab00ed01bbe38cf0edd5992"
+    },
+    {
+      "symbol": "AMZN",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "facab71a63a5390a4234dea8e66be68a51a805cb3d471ddde4b2d003edafca27"
+    },
+    {
+      "symbol": "FB",
+      "status": "unavailable",
+      "error": "$FB: Data doesn't exist for startDate = 1262322000, endDate = 1704085200"
+    },
+    {
+      "symbol": "MSFT",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "3b16d75666890a838aec8dff94cb8edb66d6ae6a55b8bd28be24d6203f1f2f5e"
+    },
+    {
+      "symbol": "BAC",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "773f9a78caa8db5eb8dded42f17d845a85ab539b9ac3dd5e639c4daeb6c901f1"
+    },
+    {
+      "symbol": "GOOGL",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "15de5dbf82f94dd96d6a3bbf1b0daf79a491bd31b800a4c63e57567265bd86c4"
+    },
+    {
+      "symbol": "GOOG",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "19ef911ae57bda32668ea9d00a2d2850b2d02b6b6da82e6a4015e7147ab45cbe"
+    },
+    {
+      "symbol": "NFLX",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "e3d6d18cb1bc5a01185ce7b646aabdc3368b75e59ef06e72ffb5c6d678347488"
+    },
+    {
+      "symbol": "GE",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "52930934e31b15dd85168b6fce9cc2be2d02318d23b33a1cdc88e4d1165db240"
+    },
+    {
+      "symbol": "JPM",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "edaa8d4dc5aa61398b2f7e71f6422f9e1dae004f1d773646ef84f4335a0725fb"
+    },
+    {
+      "symbol": "XOM",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "3ea2ad990a74d0864e8e4c21f0c3d24e16246c9550a27140a9ca569ec5fd5823"
+    },
+    {
+      "symbol": "WFC",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "e9ac94a15ffcb5a98c6ea28d8a355823bcb6c44ba2cb23e568b106e5fb5934b8"
+    },
+    {
+      "symbol": "C",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "3014e2c7be219ed30755ff56e6fad647f89f5bd9859ed1a42e84810c2dba801e"
+    },
+    {
+      "symbol": "PFE",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "df68a1f200246ae7bb1343266095892918c26bd40984dba5c1e3c8109083c2c9"
+    },
+    {
+      "symbol": "T",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "f72218711a436bab242970848b4629a6e0b313783fe0dd814eb83a7cdae2c898"
+    },
+    {
+      "symbol": "GILD",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "5c909987436c8ee8b34f5b6bb75a69640d4953f7cd590d8b65d553a0ca77759e"
+    },
+    {
+      "symbol": "AGN",
+      "status": "unavailable",
+      "error": "$AGN: possibly delisted; no timezone found"
+    },
+    {
+      "symbol": "JNJ",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "d324305cefc276db0c8e1e3b64452c4e941ea63ecc02c05440c830149a2fd987"
+    },
+    {
+      "symbol": "CVX",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "728a95b07d0d031e7a7f2873cdf24b6c6cc017b60d95f651f11accef189131a4"
+    },
+    {
+      "symbol": "PG",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "6eb7f89ff8c0affbbdb0238a9acf2c0f88ade7704bc4d51bd679ac8578040868"
+    },
+    {
+      "symbol": "INTC",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "76a3fd91c2b2880dad0f92aee0d3f5c02479738c8c5540599d89e062625f0381"
+    },
+    {
+      "symbol": "DIS",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "504b98bf81bc61c4eaf34742ae9217e5eac278e00aad6c835f69e03d3e985d14"
+    },
+    {
+      "symbol": "VZ",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "81d8bb326c9bde2b8c25e83c3524e9cf82925126952fe10d01e699fb21d75bb0"
+    },
+    {
+      "symbol": "V",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "4da76f60350e04540823adc5680938ae0c856825fcb83d9da98490727d0e8a2a"
+    },
+    {
+      "symbol": "CSCO",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "da730a4d7688c4eb7bf8bcc698a14fe57716f7c50f14bfc55cef1f30b1befa5f"
+    },
+    {
+      "symbol": "PCLN",
+      "status": "unavailable",
+      "error": "$PCLN: Data doesn't exist for startDate = 1262322000, endDate = 1704085200"
+    },
+    {
+      "symbol": "MCD",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "5732d42ba75aac0cd4d31c9be9dca66e1f39d49efdd02474f8f148334859eb8b"
+    },
+    {
+      "symbol": "HD",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "31f4bb70aed4519ef3b9656deefe6f1db65e24d5151edb4440b7ebf807ff6bd6"
+    },
+    {
+      "symbol": "CMCSA",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "703d34906cc8f0a42e6c26f7f5be78993a4d289c68de48d86b4f9cd0e93c9d92"
+    },
+    {
+      "symbol": "WMT",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "83c252d02fed3c3a0a9520d2d1a28da4fa460ec2142d27b267392c60c916eb73"
+    },
+    {
+      "symbol": "IBM",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "6815f9c1ad68d3061cd4cd0147e43b8a2f797348e93ec01dd2a040c0940b7471"
+    },
+    {
+      "symbol": "KO",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "bda0efb8cdd91fc274bafc6ee341b661c59c6c2abe774711b2ce8f4936377b54"
+    },
+    {
+      "symbol": "GS",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "3c4ee93914630eac5291d596c6509f87e69b750addbe6ee4e95fb6ab9594b883"
+    },
+    {
+      "symbol": "MRK",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "a3b94de9ad7b21d7bd8fdf94e7c4128f8588b2796df0318a8791cc7d54ea88d6"
+    },
+    {
+      "symbol": "BA",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "738582af0650a33bc17a7e1f8c9ed7a213eb4f2a1501fcd977f16976501d7e46"
+    },
+    {
+      "symbol": "SLB",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "a998c1a1fbe6cbdd33c69006ff9610bb04229b5bdecccc008f6ca06b6ab9b9f5"
+    },
+    {
+      "symbol": "QCOM",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "13298f8a936af0010b9dabb615f10d74b7c1b513152daae3d54a4130409e1ab7"
+    },
+    {
+      "symbol": "NKE",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "3127260b44aeeb9df3a33615435120e013c781c1c2c2c45eef2a2fb6a1587864"
+    },
+    {
+      "symbol": "SBUX",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "18e1c8912f280588c1dc664ea2eaff64d0c0d44db7c132d83a4e6f7dd507844a"
+    },
+    {
+      "symbol": "ORCL",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "2dcd52c331894990cb4aa199481056cce45044bc3b45a03c8f5d86f846a5ff90"
+    },
+    {
+      "symbol": "BRK.B",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "54af9b4de7c93199127e92d224a0439780ec6d8507f277488c23ff6fa1c4111d"
+    },
+    {
+      "symbol": "CVS",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "0daaa3ce7dbecc93fc50a9a90d65fe5b22e62f5a554793d485fc7fb37b3d3fbf"
+    },
+    {
+      "symbol": "AMGN",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "9137a082ccfeeb4b4f709669f7955c66ccc656eef44ec3e92c4f8c243fb888dd"
+    },
+    {
+      "symbol": "CELG",
+      "status": "unavailable",
+      "error": "$CELG: possibly delisted; no timezone found"
+    },
+    {
+      "symbol": "BMY",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "5f8697ecbde10bd44b1896a3e3014470bdce5151678e13b0f77a64cf72e25df0"
+    },
+    {
+      "symbol": "CMG",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "17e3c80bc5c174f04b538b2d2c1982354823ce63e261092af112019d379e80c7"
+    },
+    {
+      "symbol": "BIIB",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "d5adc2a82b95c166fdeb182d443968ce1cc08c36dcf823af741f5640c6f66968"
+    },
+    {
+      "symbol": "NVDA",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "af09c43887c24a67a72cd60c731391864c1198d14e15563c870b89812826ac78"
+    },
+    {
+      "symbol": "PEP",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "48c71f3654dd8e6645927d760081710c57db5b865b122dba317a2735c3870240"
+    },
+    {
+      "symbol": "ABBV",
+      "status": "downloaded",
+      "rows": 2768,
+      "sha256": "6124a3a3470a9707ad2274a363973c01d27f743f30db60c900b6117730d7c85a"
+    },
+    {
+      "symbol": "UNH",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "3bd402c412cf8a2f9d622a2d9d3395bb4451a2f608540041de24d637aa8af034"
+    },
+    {
+      "symbol": "DAL",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "642fa3957769b27a2b5daf57213e701a8777038eb95dff3fd6c7f84b228686d0"
+    },
+    {
+      "symbol": "AVGO",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "a94d09558e2bdc60fffe38436ae13c689850300f416d137c5b94b771bec9d65c"
+    },
+    {
+      "symbol": "PM",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "f5df9c30994e58a9a20d14c6d35c57e6e222dfc2f0446e32ce3e752773316e51"
+    },
+    {
+      "symbol": "CHTR",
+      "status": "downloaded",
+      "rows": 3521,
+      "sha256": "30884f6e3798d80ba481ada045759d1b6bc04d9491431a6198a04800669e3cd8"
+    },
+    {
+      "symbol": "MDT",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "7987b607862b857a96c194d98c3b07d9dfba149c9d48e6666fda1594a51ce4a8"
+    },
+    {
+      "symbol": "F",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "592165ce207b7f7405a71526c6cd6dd867bab238231152ef9c9014952124897a"
+    },
+    {
+      "symbol": "MS",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "2429f728c94520b4241c6e17b0bbab5d2755d7485e2bd0b511e278bbf5613b33"
+    },
+    {
+      "symbol": "GM",
+      "status": "downloaded",
+      "rows": 3300,
+      "sha256": "16b58eb3a6703a3562a32868d74236bd0ecdb1258dd5310c13b66cfc59da03d4"
+    },
+    {
+      "symbol": "UTX",
+      "status": "unavailable",
+      "error": "$UTX: possibly delisted; no timezone found"
+    },
+    {
+      "symbol": "LOW",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "6a46881f70aebcf56b3cb9b520e910ff1b9ca7bac462f80408a4c10d853f8073"
+    },
+    {
+      "symbol": "HAL",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "df7eb468ffe87c41cb38a6280ab41d3be20c01fb63affc9a3883f287b71b394e"
+    },
+    {
+      "symbol": "FCX",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "ce49fc81f9f8d870e85f13722c3e0204163436dbeab890fc3c62d31649f13ded"
+    },
+    {
+      "symbol": "MO",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "7f9579c4e23dc8ba01eb8612b3526772336ae506e5610e2af2e875645de604b3"
+    },
+    {
+      "symbol": "CAT",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "183c247939f9b34b0ef41fd44c0bb8d571ffd1198132d167db770dfababde7a7"
+    },
+    {
+      "symbol": "COP",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "5e7b04a3ebf8082245b4c02a77a222a112f059c04972f473ad69e06ea2289712"
+    },
+    {
+      "symbol": "UNP",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "e65e56c465e2327e6938f0f4ac88df360222cf578ee78bf3de0b0524b297ec78"
+    },
+    {
+      "symbol": "AIG",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "42d12a4457327167de1a4a1959e77e6dc78e02985aea73f3b8eba4cfc838e45b"
+    },
+    {
+      "symbol": "MA",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "0f7678a688383ae3da3e4875b0706bc6d33e2634dedcc5cfa0bcb2a4f0da64a3"
+    },
+    {
+      "symbol": "TGT",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "a99b42640be5eac358cbc335ff116d4f89fc40efa9082563be7ea6ca82b9fc91"
+    },
+    {
+      "symbol": "MU",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "9ef5d36d00af2b1a8c4217ccff7a926675e7ddad4fe969691e36348bd8c103ce"
+    },
+    {
+      "symbol": "CRM",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "053e8b01bb0959f005e9c8da3bad0bd75204b077a79e4940da134d39bbff0aca"
+    },
+    {
+      "symbol": "COST",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "d584538e56b80b124cfdd77e7643f8f21f48ef3280d8ad1cc1dabfa78a3ceed6"
+    },
+    {
+      "symbol": "HON",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "f46f64e6218a28f64ab190752a26d78f63d9f216f6a1d0a1e7094db1240ae6bb"
+    },
+    {
+      "symbol": "MDLZ",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "eb4989def662f8ce1dabf68582a3c0fd9468b7539aa7fbc5d0049b22179c627b"
+    },
+    {
+      "symbol": "VLO",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "f1a894f16ed245c1a56948bfb5b9886552d99e5e39c02452696a41fea36becce"
+    },
+    {
+      "symbol": "MMM",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "cbef48f236af98853b320d04bd24dceb1fd729cbeba742bcc576a08a00c29bdc"
+    },
+    {
+      "symbol": "LMT",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "f91130a9a0289a79063b004028f80ee898fee76ab366adf5ed36e4ceee24bacf"
+    },
+    {
+      "symbol": "REGN",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "676cd67597443975834c1458bce20928beabc6a99a908994ce29063e5dd4f6c0"
+    },
+    {
+      "symbol": "WBA",
+      "status": "unavailable",
+      "error": "$WBA: possibly delisted; no timezone found"
+    },
+    {
+      "symbol": "TWX",
+      "status": "unavailable",
+      "error": "$TWX: possibly delisted; no timezone found"
+    },
+    {
+      "symbol": "KMI",
+      "status": "downloaded",
+      "rows": 3242,
+      "sha256": "77d1a885792ecaba3a74cdd74f1695ea5a5894dabb06024f1be7925178ce865c"
+    },
+    {
+      "symbol": "ABT",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "8c505b4bc438a25e7c69d37fb59acf9a9e69e6cf43dc071f0992de7d37bc6b71"
+    },
+    {
+      "symbol": "OXY",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "30e41b4fa776e26fd035b62683752c34916ef8df8e3912f93699bf2b69126479"
+    },
+    {
+      "symbol": "TXN",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "584f2f61fe8ffc64f07877e96b1ab3f3e97b43d2697b643612ae314030c0a448"
+    },
+    {
+      "symbol": "LLY",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "5e95ee748c4fe910011cdc2458544d1434b86dabe9e957fbf693926631dfdba3"
+    },
+    {
+      "symbol": "PXD",
+      "status": "unavailable",
+      "error": "$PXD: possibly delisted; no timezone found"
+    },
+    {
+      "symbol": "AAL",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "c29302535dd36fba3a741b8859a8a20b70d55ba8fd75629dc7e2c57acf54cbac"
+    },
+    {
+      "symbol": "KR",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "97c9ae2422f98f7254511cc80e96ac70780ab94fc8d5912a45ac6d25fdcc83ed"
+    },
+    {
+      "symbol": "ATVI",
+      "status": "unavailable",
+      "error": "$ATVI: possibly delisted; no timezone found"
+    },
+    {
+      "symbol": "USB",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "d61896cbe3504fda9730c1ed1dfd11fa03d589223c348d3cf17ec2e32275c91e"
+    },
+    {
+      "symbol": "AMAT",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "346fbf7ef91ed39bc7f18858264718cc1f5f3bbb5b0b4a15810f4a036a03ad0f"
+    },
+    {
+      "symbol": "PYPL",
+      "status": "downloaded",
+      "rows": 2138,
+      "sha256": "73a1a50503dee9e4e5daed251011d1d138bed5861fe417457e487a34ae105254"
+    },
+    {
+      "symbol": "MET",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "cc45acef46e873b32ad4bbc5fb58f1008cde570d52973ca68eba800ff9224ace"
+    },
+    {
+      "symbol": "EOG",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "49efbd00fe37024d0f92e82bbd9b45a250dec8d746d437613c92bca51da0c02a"
+    },
+    {
+      "symbol": "AXP",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "9054e1448b1b8c5edffc3d0c57e66d0e8cec7fb722cdd2b1ae62f8142a5f02dc"
+    },
+    {
+      "symbol": "MON",
+      "status": "unavailable",
+      "error": "$MON: possibly delisted; no timezone found"
+    },
+    {
+      "symbol": "APC",
+      "status": "unavailable",
+      "error": "$APC: Data doesn't exist for startDate = 1262322000, endDate = 1704085200"
+    },
+    {
+      "symbol": "ESRX",
+      "status": "unavailable",
+      "error": "$ESRX: possibly delisted; no timezone found"
+    },
+    {
+      "symbol": "WYNN",
+      "status": "downloaded",
+      "rows": 3522,
+      "sha256": "63278f37373008b664e80443665b4ba0bd5cc010bcf534ae2f65df4748553f49"
+    }
+  ]
+}

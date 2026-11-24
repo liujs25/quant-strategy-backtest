@@ -1,0 +1,42 @@
+{
+  "label": "RETROSPECTIVE COMPARISON, NOT A FRESH HOLDOUT",
+  "model_parameters_frozen": true,
+  "training_label_end_exclusive": "2024-10-01",
+  "training_observations": 297762,
+  "evaluation_observations": 17748,
+  "sessions": 204,
+  "execution_period": [
+    "2026-01-02 00:00:00",
+    "2026-10-23 00:00:00"
+  ],
+  "terminal_valuation_date": "2026-10-26 00:00:00",
+  "target_end_max": "2026-11-20 00:00:00",
+  "tradable_stocks": 87,
+  "rank_reference_stocks": 88,
+  "risk": {
+    "name": "common_diversified",
+    "max_weight": 0.03,
+    "turnover_penalty": 1.0
+  },
+  "cost_one_way": 0.0015,
+  "device": "Apple M5 CPU; no MPS benefit for tree fitting and constrained optimization",
+  "ranker_refit": "Original frozen architecture/objective refit on the same permissible training sample as Residual ML; no new parameter selection. Original2024-25 weights not reused, avoiding unequal training cutoffs.",
+  "residual_checkpoint_sha256": "df45c78b093c2339846c6b45a70f144501a5d78681ac0ca53340f95168bfa48a",
+  "allocator": "Common incremental.core.backtest with neutral=False for all; equal-weight score zero; no strategy-specific buffer or exposure constraints",
+  "prior_artifacts": "unchanged",
+  "checks": [
+    "All predictions finite on common keys",
+    "Residual checkpoint exactly reproduces prior frozen scores",
+    "Ranker checkpoint replay",
+    "Cash/holdings/dividend/cost/terminal-value reconciliation",
+    "Rebalance caps, leverage and ex ante volatility constraints",
+    "Equal Weight equal weights at rebalance"
+  ],
+  "files_sha256": {
+    "incremental/core.py": "1ef2e42b19bc15f7cf108f8ff838e38dbc76577f1f8809b6be3415c398c55ad7",
+    "research/engine.py": "58a0dd3d54dbd0eb78d2dfbc586d87d9ca140b5a49f9ccc61c0875fae6fc11d2",
+    "research/selection_lock.json": "44ecd141803ac1f9e06aa686c54bee8cca4f100f7aeb1072e033fc2c1cde7a3d",
+    "incremental/selection_lock.json": "a0295c5a7d2015f16bbd846d0ecc051082d499c9bd34e5bbed5e9359c4d96d0d",
+    "comparison_2026/run.py": "a550597cec2a41a92b55c7bdeb442b95e954bb01ebc7d8c8deb71f73cc3b983c"
+  }
+}

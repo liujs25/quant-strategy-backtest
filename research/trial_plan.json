@@ -1,0 +1,194 @@
+[
+  {
+    "family": "LightGBM",
+    "objective": "regression",
+    "horizon": 1,
+    "depth": 3
+  },
+  {
+    "family": "LightGBM",
+    "objective": "regression",
+    "horizon": 1,
+    "depth": 6
+  },
+  {
+    "family": "LightGBM",
+    "objective": "regression",
+    "horizon": 5,
+    "depth": 3
+  },
+  {
+    "family": "LightGBM",
+    "objective": "regression",
+    "horizon": 5,
+    "depth": 6
+  },
+  {
+    "family": "LightGBM",
+    "objective": "regression",
+    "horizon": 20,
+    "depth": 3
+  },
+  {
+    "family": "LightGBM",
+    "objective": "regression",
+    "horizon": 20,
+    "depth": 6
+  },
+  {
+    "family": "LightGBM",
+    "objective": "ranking",
+    "horizon": 1,
+    "depth": 3
+  },
+  {
+    "family": "LightGBM",
+    "objective": "ranking",
+    "horizon": 1,
+    "depth": 6
+  },
+  {
+    "family": "LightGBM",
+    "objective": "ranking",
+    "horizon": 5,
+    "depth": 3
+  },
+  {
+    "family": "LightGBM",
+    "objective": "ranking",
+    "horizon": 5,
+    "depth": 6
+  },
+  {
+    "family": "LightGBM",
+    "objective": "ranking",
+    "horizon": 20,
+    "depth": 3
+  },
+  {
+    "family": "LightGBM",
+    "objective": "ranking",
+    "horizon": 20,
+    "depth": 6
+  },
+  {
+    "family": "XGBoost",
+    "objective": "regression",
+    "horizon": 1,
+    "depth": 3
+  },
+  {
+    "family": "XGBoost",
+    "objective": "regression",
+    "horizon": 1,
+    "depth": 6
+  },
+  {
+    "family": "XGBoost",
+    "objective": "regression",
+    "horizon": 5,
+    "depth": 3
+  },
+  {
+    "family": "XGBoost",
+    "objective": "regression",
+    "horizon": 5,
+    "depth": 6
+  },
+  {
+    "family": "XGBoost",
+    "objective": "regression",
+    "horizon": 20,
+    "depth": 3
+  },
+  {
+    "family": "XGBoost",
+    "objective": "regression",
+    "horizon": 20,
+    "depth": 6
+  },
+  {
+    "family": "XGBoost",
+    "objective": "ranking",
+    "horizon": 1,
+    "depth": 3
+  },
+  {
+    "family": "XGBoost",
+    "objective": "ranking",
+    "horizon": 1,
+    "depth": 6
+  },
+  {
+    "family": "XGBoost",
+    "objective": "ranking",
+    "horizon": 5,
+    "depth": 3
+  },
+  {
+    "family": "XGBoost",
+    "objective": "ranking",
+    "horizon": 5,
+    "depth": 6
+  },
+  {
+    "family": "XGBoost",
+    "objective": "ranking",
+    "horizon": 20,
+    "depth": 3
+  },
+  {
+    "family": "XGBoost",
+    "objective": "ranking",
+    "horizon": 20,
+    "depth": 6
+  },
+  {
+    "family": "LSTM",
+    "objective": "regression",
+    "horizon": 5,
+    "lookback": 20
+  },
+  {
+    "family": "LSTM",
+    "objective": "rank_regression",
+    "horizon": 5,
+    "lookback": 20
+  },
+  {
+    "family": "LSTM",
+    "objective": "regression",
+    "horizon": 5,
+    "lookback": 60
+  },
+  {
+    "family": "LSTM",
+    "objective": "rank_regression",
+    "horizon": 5,
+    "lookback": 60
+  },
+  {
+    "family": "Transformer",
+    "objective": "regression",
+    "horizon": 5,
+    "lookback": 20
+  },
+  {
+    "family": "Transformer",
+    "objective": "rank_regression",
+    "horizon": 5,
+    "lookback": 20
+  },
+  {
+    "family": "Transformer",
+    "objective": "regression",
+    "horizon": 5,
+    "lookback": 60
+  },
+  {
+    "family": "Transformer",
+    "objective": "rank_regression",
+    "horizon": 5,
+    "lookback": 60
+  }
+]

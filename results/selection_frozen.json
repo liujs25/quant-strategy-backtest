@@ -1,0 +1,17 @@
+{
+  "selections": {
+    "RandomForest": {
+      "max_depth": 10,
+      "min_samples_leaf": 100
+    },
+    "LSTM": {
+      "epochs": 1
+    },
+    "Transformer": {
+      "epochs": 1
+    }
+  },
+  "protocol_sha256": "d2ba16475b229287d69ea0160c604295e176c78423b11566b6909dbcf9281d4b",
+  "frozen_before_test": true,
+  "strategy_threshold": 0.003
+}

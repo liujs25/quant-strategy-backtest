@@ -1,0 +1,20 @@
+[
+  {
+    "evaluation_start": "2021-01-01",
+    "training_label_end_exclusive": "2019-10-01",
+    "earliest_raw_feature_date_for_60_window": "2019-10-08 00:00:00",
+    "passed": true
+  },
+  {
+    "evaluation_start": "2022-01-01",
+    "training_label_end_exclusive": "2020-10-01",
+    "earliest_raw_feature_date_for_60_window": "2020-10-07 00:00:00",
+    "passed": true
+  },
+  {
+    "evaluation_start": "2024-01-01",
+    "training_label_end_exclusive": "2022-10-01",
+    "earliest_raw_feature_date_for_60_window": "2022-10-04 00:00:00",
+    "passed": true
+  }
+]

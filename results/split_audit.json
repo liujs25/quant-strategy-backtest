@@ -1,0 +1,38 @@
+[
+  {
+    "fold": "validation",
+    "n_train": 314247,
+    "n_evaluate": 125052,
+    "max_train_target": "2015-11-03 00:00:00",
+    "min_evaluation_feature_start": "2015-11-04 00:00:00",
+    "evaluation_start": "2016-01-04 00:00:00",
+    "evaluation_end": "2016-12-30 00:00:00"
+  },
+  {
+    "fold": "test_1",
+    "n_train": 439083,
+    "n_evaluate": 62462,
+    "max_train_target": "2016-11-02 00:00:00",
+    "min_evaluation_feature_start": "2016-11-03 00:00:00",
+    "evaluation_start": "2017-01-03 00:00:00",
+    "evaluation_end": "2017-06-30 00:00:00"
+  },
+  {
+    "fold": "test_2",
+    "n_train": 501442,
+    "n_evaluate": 63324,
+    "max_train_target": "2017-05-04 00:00:00",
+    "min_evaluation_feature_start": "2017-05-05 00:00:00",
+    "evaluation_start": "2017-07-03 00:00:00",
+    "evaluation_end": "2017-12-29 00:00:00"
+  },
+  {
+    "fold": "test_3",
+    "n_train": 564629,
+    "n_evaluate": 13108,
+    "max_train_target": "2017-11-01 00:00:00",
+    "min_evaluation_feature_start": "2017-11-02 00:00:00",
+    "evaluation_start": "2018-01-02 00:00:00",
+    "evaluation_end": "2018-02-07 00:00:00"
+  }
+]

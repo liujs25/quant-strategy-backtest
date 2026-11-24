@@ -1,0 +1,23 @@
+{
+  "purpose": "post-reveal descriptive checks; no reselection",
+  "buy_hold": {
+    "annualized_return": 0.18704951671484205,
+    "total_return": 0.3881500834535776,
+    "sharpe": 1.2407167450105867,
+    "max_drawdown": 0.16911498380527923,
+    "mean_daily_turnover": 0.0039041837660324288,
+    "annualized_turnover": 0.983854309040172,
+    "transaction_costs": 336.9252216671376,
+    "final_equity": 138815.00834535775,
+    "days": 482
+  },
+  "rank_ic_block_95": [
+    -0.019019284353203207,
+    0.11445267845850823
+  ],
+  "selected_minus_momentum_mean_ann": 0.02185670767272416,
+  "selected_minus_momentum_block_95": [
+    -0.08840528905092279,
+    0.1314869906472823
+  ]
+}

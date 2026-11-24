@@ -1,0 +1,22 @@
+{
+ "status":"design frozen before holdout download",
+ "publication":"LOCAL ONLY; no commit/push",
+ "holdout":["2026-01-01","2026-11-20"],
+ "holdout_download_policy":"no download until selection lock; one frozen evaluation, all findings retained; short retrospective holdout cannot establish long-term alpha",
+ "development_folds":[["2022-01-01","2023-12-31","2020-10-01"],["2024-01-01","2025-12-31","2022-10-01"]],
+ "development_status":"all data through 2025 exploratory; selection scores are not independent confirmations",
+ "universe":"same frozen 87 tradable names and 88-name development rank reference; no future-conditioned substitutions",
+ "target":"20-session dividend-inclusive open-to-open residual return",
+ "factor_proxies":["rank_mom_12_1","rank_mom_60","rank_vol_20","rank_reversal_5"],
+ "models":["raw_return","residual_all","residual_no_momentum","residual_no_volume"],
+ "model_params":{"n_estimators":120,"max_depth":3,"num_leaves":8,"learning_rate":0.03,"min_child_samples":200,"reg_lambda":10,"random_state":42,"n_jobs":1},
+ "model_selection":"fixed parameters; no new tree search; residual labels cross-sectionally regress training future returns on contemporaneously known factor proxies",
+ "strategies":["equal_weight","momentum","multi_momentum","low_vol","traditional_combo","raw_ml","residual_tilt","residual_no_momentum_tilt","residual_no_volume_tilt","ml_momentum_50"],
+ "risk_variants":[{"name":"responsive","turnover_penalty":0.1,"max_weight":0.05},{"name":"sticky","turnover_penalty":1.0,"max_weight":0.05},{"name":"diversified","turnover_penalty":1.0,"max_weight":0.03}],
+ "risk":"long-only; max 95% invested; 10% annualized ex ante volatility target using trailing 60-session close-return covariance with 25% diagonal shrinkage; no leverage; rebalance every20 sessions",
+ "incremental_constraint":"residual-tilt optimization fixes momentum, medium momentum, volatility and reversal proxy exposure to contemporaneous optimized momentum reference before common volatility scaling",
+ "cost_one_way":0.0015,
+ "selection":"highest mean daily active-return information ratio across two development folds vs same-risk momentum; eligible only if positive active mean in both folds and mean Sharpe exceeds momentum with no worse worst-fold drawdown; otherwise exploratory candidate only",
+ "inference":"paired whole-date circular block bootstrap 20 and60 sessions; HAC factor-proxy regression lag20; report uncertainty against momentum and best traditional comparator selected on development only",
+ "no_final_reselection":true
+}

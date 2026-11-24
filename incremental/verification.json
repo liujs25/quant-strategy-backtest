@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "checks": [
+    "Every development/final ledger reconciles cash, positions, dividends, costs, returns and final liquidation; position caps and pre-scale factor neutrality passed.",
+    "All eight development model checkpoints and projected/composite scores replayed on eight full cross sections per fold.",
+    "All final forecasts replayed; metrics recomputed; date/label boundaries passed; appending holdout preserves 256 past feature vectors."
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "checks": [
+    "Common 87-stock, 204-session sample and temporal label boundaries",
+    "All portfolio metrics and daily IC independently recomputed",
+    "All 12 pairwise block-bootstrap intervals recomputed",
+    "Both frozen model checkpoints replayed on every evaluation observation",
+    "Cash/holdings/dividend/cost reconciliation and terminal liquidation",
+    "Rebalance weight/exposure caps, ex ante volatility ceiling and equal-weight equality",
+    "Frozen training source and specification hashes"
+  ],
+  "observations": 17748,
+  "sessions": 204,
+  "intervals_checked": 12,
+  "prior_local_files_verified_unchanged": 1474
+}

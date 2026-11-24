@@ -1,0 +1,10 @@
+{
+  "dataset": "camnugent/sandp500",
+  "url": "https://www.kaggle.com/datasets/camnugent/sandp500",
+  "download_url": "https://www.kaggle.com/api/v1/datasets/download/camnugent/sandp500",
+  "download_date": "2026-11-24",
+  "csv_sha256": "6aea253cd19de60b568143991aaf1fa482456565c389205658d236e595e716cf",
+  "archive_sha256": "4f775195e67179c9c19b63f084e5f2e049fae734023f9d10e233388d6423752a",
+  "member": "all_stocks_5yr.csv",
+  "bytes": 29580549
+}
